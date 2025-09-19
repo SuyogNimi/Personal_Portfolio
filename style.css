@@ -1,0 +1,356 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: #1F1059;
+  color: white;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Goldman-Regular';
+    src: url('fonts/Goldman-Regular.ttf') format('truetype');
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo span { color: #38bdf8; }
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-size: 17px;
+}
+.nav-links a {
+  color: #d395f8;
+  transition: 0.4s;
+  text-decoration: none;
+  font-family: 'Bebas Neue';
+}
+.nav-links a:hover {
+  color: #fbf7c6;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('assets/ubg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-content {
+    position:absolute;
+    top: 30%;
+    left: 150px;
+    font-family:'Bebas Neue', sans-serif;
+}
+.hero h1 {
+  font-size: 5rem;
+  color:#fbf7c6;
+  font-family:'Bebas Neue', sans-serif;
+}
+.hero h5 {
+  font-size: 20px;
+  color:#f6f3d3;
+  font-family:'Bebas Neue', sans-serif;
+}
+.hero span {
+  color: #420b61;
+  font-family:'Bebas Neue', sans-serif;
+}
+.hero .btn {
+  display: inline-block;
+  position:absolute;
+  left: 80px;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #420b61;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #f6f3d3;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.hero .btn:hover {
+  background: #5ab9bd;
+  transform: scale(1.05);
+}
+
+.hero .btn2 {
+  display: inline-block;
+  position:absolute;
+  left: 235px;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #5ab9bd;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #f6f3d3;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.hero .btn2:hover {
+  background: #420b61;
+  transform: scale(1.05);
+}
+
+/* Sections */
+section {
+  padding: 40px 40px;
+  text-align: center;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Goldman-Regular';
+  color: #fbf7c6;
+  display: inline-block;
+  border-bottom: 3px solid #fff049;
+  padding-bottom: 2px;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Goldman-Regular';
+  color: #fbf7c6;
+  display: inline-block;
+  border-bottom: 3px solid #fff049;
+  padding-bottom: 2px;
+  isolation: isolate;
+}
+.about-description {
+  left: 46px;
+  color: #bcbcbc;
+  max-width: 1100px;
+  margin: 25px auto;
+  font-size: 22px;
+  text-align: center;
+  font-family: 'Goldman-Regular';
+}
+
+/* Skills */
+.skills-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.title {
+  font-size: 18px;
+  color: #b5b5b5;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  background: linear-gradient(160deg, #e7db53, #a53ee0);
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.skill {
+  text-align: center;
+}
+.skill img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.skill img:hover {
+  transform: scale(1.1);
+}
+
+.skill p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Education Section */
+#education {
+  padding: 40px 20px;
+  background-image: url('assets/2bg.jpg');
+  color: white;
+  text-align: center;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: #1F1059;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  background-color: #d395f8;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  padding: 25px;
+  background: #380f89;
+  border-radius: 12px;
+  display: inline-block;
+  max-width: 400px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #fbf7c6;
+  font-family: 'Goldman-Regular';
+}
+
+.timeline-content span {
+  display: block;
+  font-size: 14px;
+  color: #d395f8;
+  margin: 5px 0;
+  font-family: 'Goldman-Regular';
+}
+
+.timeline-content p {
+  font-size: 15px;
+  margin: 0;
+  font-family: 'Goldman-Regular';
+  color: #fbf7c6;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  padding: 50px 10%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 70px;
+}
+.project-card {
+  background: #1c1830;
+  border-radius: 12px;
+  max-width: 350px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px #fbf7c6;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+}
+.project-grid img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Contact */
+.contact {
+  background-color:#000000;
+}
+.contact-description {
+  color: #bcbcbc;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Goldman-Regular';
+}
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  border-radius: 50%;   
+  object-fit: cover;    
+  border: 2px solid #fdf89a; 
+}
+
+.card p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  color: #bcbcbc;
+}
+
+/* Footer */
+footer {
+  background: #292b2f;
+  color: #bcbcbc;
+  padding: 20px;
+  text-align: center;
+}
