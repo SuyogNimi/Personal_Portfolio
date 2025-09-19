@@ -18,4 +18,4 @@ It showcases my skills, projects, and experience in web development, design, and
 ## Installation / Setup
 1. Clone the repository:  
 ```bash
-git clone <your-repo-link>
+git clone https://suyognimi.github.io/Personal_Portfolio/
