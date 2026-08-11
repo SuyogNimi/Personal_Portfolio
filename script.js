@@ -54,3 +54,41 @@ function highlightNav() {
 // Initial call and scroll listener
 highlightNav();
 window.addEventListener('scroll', highlightNav);
+
+// Project Card Expand / Modal Toggle
+const projectCards = document.querySelectorAll('.project-card');
+const modalBackdrop = document.querySelector('.modal-backdrop');
+
+projectCards.forEach(card => {
+  card.addEventListener('click', (e) => {
+    // If user clicked the live preview link, don't toggle expansion
+    if (e.target.classList.contains('project-btn')) {
+      return;
+    }
+    
+    const isExpanded = card.classList.contains('expanded');
+    
+    // Collapse all cards first
+    projectCards.forEach(c => {
+      c.classList.remove('expanded');
+    });
+    modalBackdrop.classList.remove('active');
+    document.body.classList.remove('card-expanded-active');
+    
+    // If it wasn't expanded, expand this one
+    if (!isExpanded) {
+      card.classList.add('expanded');
+      modalBackdrop.classList.add('active');
+      document.body.classList.add('card-expanded-active');
+    }
+  });
+});
+
+// Click on backdrop to close
+modalBackdrop.addEventListener('click', () => {
+  projectCards.forEach(c => {
+    c.classList.remove('expanded');
+  });
+  modalBackdrop.classList.remove('active');
+  document.body.classList.remove('card-expanded-active');
+});
